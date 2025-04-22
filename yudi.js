@@ -6,12 +6,12 @@
 
   for (let i = 0; i < COUNT; i++) {
     const drop = document.createElement('div');
-    const dropHeight = Math.random() * 30 + 20; // 雨滴长度
-    const fallTime = Math.random() * 2 + 2.5;   // 下落时间更慢
+    const dropHeight = Math.random() * 40 + 30; // 更长的雨滴
+    const fallTime = Math.random() * 3 + 4.5;   // 更慢的下落时间
 
     drop.style.cssText = `
       position: absolute;
-      width: 2px;
+      width: 3px; /* 更粗 */
       height: ${dropHeight}px;
       background: rgba(174,194,224,0.6);
       top: ${-Math.random() * 100}px;

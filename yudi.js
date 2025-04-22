@@ -1,17 +1,17 @@
 (function rainEffect() {
-  const COUNT = 100; // 雨滴数量
+  const COUNT = 500; // 雨滴数量
   const container = document.createElement('div');
   container.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;overflow:hidden;";
   document.body.appendChild(container);
 
   for (let i = 0; i < COUNT; i++) {
     const drop = document.createElement('div');
-    const dropHeight = Math.random() * 40 + 30; // 更长的雨滴
-    const fallTime = Math.random() * 3 + 4.5;   // 更慢的下落时间
+    const dropHeight = Math.random() * 30; // 雨滴长度
+    const fallTime = Math.random() * 2 + 1;   // 下落时间更慢
 
     drop.style.cssText = `
       position: absolute;
-      width: 3px; /* 更粗 */
+      width: 2px;
       height: ${dropHeight}px;
       background: rgba(174,194,224,0.6);
       top: ${-Math.random() * 100}px;

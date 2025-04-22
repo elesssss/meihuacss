@@ -6,15 +6,19 @@
 
   for (let i = 0; i < COUNT; i++) {
     const drop = document.createElement('div');
+    const dropHeight = Math.random() * 30 + 20; // 雨滴长度
+    const fallTime = Math.random() * 2 + 2.5;   // 下落时间更慢
+
     drop.style.cssText = `
-      position:absolute;
-      width:1px;
-      height:${Math.random() * 20 + 10}px;
-      background:rgba(174,194,224,0.5);
-      top:${-Math.random() * 100}px;
-      left:${Math.random() * window.innerWidth}px;
-      animation: fall ${Math.random() * 1 + 0.5}s linear infinite;
+      position: absolute;
+      width: 2px;
+      height: ${dropHeight}px;
+      background: rgba(174,194,224,0.6);
+      top: ${-Math.random() * 100}px;
+      left: ${Math.random() * window.innerWidth}px;
+      animation: fall ${fallTime}s linear infinite;
     `;
+
     container.appendChild(drop);
   }
 
